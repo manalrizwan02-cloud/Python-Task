@@ -1,0 +1,346 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOb83UO8C+hliLpt9znC24t",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/manalrizwan02-cloud/Python-Task/blob/Python-Beginner-task/Python%20Intermediate%20Task%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KEg1_mpGsbxr",
+        "outputId": "fee225b4-8e38-4e9c-adb8-02fe3a3a8d55"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter your total products:10\n",
+            "Enter your Product 1 name:Oil\n",
+            "Enter  Oil Price:Rs500\n",
+            "Enter Oil quantity:6\n",
+            "Enter your Product 2 name:Rice\n",
+            "Enter  Rice Price:Rs250\n",
+            "Enter Rice quantity:10\n",
+            "Enter your Product 3 name:Sugar\n",
+            "Enter  Sugar Price:Rs200\n",
+            "Enter Sugar quantity:5\n",
+            "Enter your Product 4 name:Salt\n",
+            "Enter  Salt Price:Rs60\n",
+            "Enter Salt quantity:5\n",
+            "Enter your Product 5 name:Flour\n",
+            "Enter  Flour Price:Rs200\n",
+            "Enter Flour quantity:10\n",
+            "Enter your Product 6 name:Shampoo\n",
+            "Enter  Shampoo Price:Rs1200\n",
+            "Enter Shampoo quantity:2\n",
+            "Enter your Product 7 name:Soap\n",
+            "Enter  Soap Price:Rs80\n",
+            "Enter Soap quantity:5\n",
+            "Enter your Product 8 name:Pulses\n",
+            "Enter  Pulses Price:Rs300\n",
+            "Enter Pulses quantity:5\n",
+            "Enter your Product 9 name:Milk\n",
+            "Enter  Milk Price:Rs100\n",
+            "Enter Milk quantity:5\n",
+            "Enter your Product 10 name:Coffee\n",
+            "Enter  Coffee Price:Rs1000\n",
+            "Enter Coffee quantity:1\n",
+            "total bill:Rs 14600\n",
+            "\n",
+            "Final Bill:Rs 13140.0\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Task 6\n",
+        "# Grocery Shopping bill\n",
+        "user_totalproducts=int(input(\"Enter your total products:\"))\n",
+        "total_bill=0\n",
+        "for i in range(1,user_totalproducts+1):\n",
+        "    name=input(f\"Enter your Product {i} name:\")\n",
+        "    price=int(input(f\"Enter  {name} Price:Rs\"))\n",
+        "    quantity=int(input(f\"Enter {name} quantity:\"))\n",
+        "\n",
+        "    Sub_total=price*quantity\n",
+        "    total_bill=total_bill+Sub_total\n",
+        "\n",
+        "print(\"total bill:Rs\",total_bill)\n",
+        "\n",
+        "if total_bill>=5000:\n",
+        "    Dis_per=10\n",
+        "    Discount=total_bill*0.1\n",
+        "    Final_Bill=total_bill-Discount\n",
+        "    print(\"\\nFinal Bill:Rs\",Final_Bill)\n",
+        "else:\n",
+        "    Final_Bill=total_bill\n",
+        "    #print(\"Discount is not apply for below 5000 bill\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Task 7\n",
+        "#Employee weekly salary\n",
+        "name=input(\"Enter Employee Name:\")\n",
+        "T_workhours=float(input(\"Enter Employee Total working hours:\"))\n",
+        "Hourly_rate=float(input(\"Enter Employee Hourly rate:\"))\n",
+        "\n",
+        "print(\"\\nEmployee Name:\",name)\n",
+        "normal_hoursalary=40*Hourly_rate\n",
+        "\n",
+        "if T_workhours == 40:\n",
+        "    print(\"Normal Hours Salary:Rs\",normal_hoursalary)\n",
+        "\n",
+        "else:\n",
+        "    ex_workhours=T_workhours-40\n",
+        "    ex_hourrate=Hourly_rate*1.5\n",
+        "    ex_hoursalary=ex_workhours * ex_hourrate\n",
+        "    weekly_salary=normal_hoursalary + ex_hoursalary\n",
+        "\n",
+        "    print(\"\\nNormal Hours Salary:Rs\",normal_hoursalary)\n",
+        "    print(\"\\nExtra Work hours:\", ex_workhours)\n",
+        "    print(\"\\nExtra Hours Salary:Rs\",ex_hoursalary)\n",
+        "    print(\"\\nWeekly Salary:Rs\",weekly_salary)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "SjVPGDlrwJhi",
+        "outputId": "df4812d8-b802-49b9-fd42-a567a3519e8f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter Employee Name:Haris\n",
+            "Enter Employee Total working hours:50\n",
+            "Enter Employee Hourly rate:600\n",
+            "\n",
+            "Employee Name: Haris\n",
+            "\n",
+            "Normal Hours Salary:Rs 24000.0\n",
+            "\n",
+            "Extra Work hours: 10.0\n",
+            "\n",
+            "Extra Hours Salary:Rs 9000.0\n",
+            "\n",
+            "Weekly Salary:Rs 33000.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Task 8\n",
+        "#Bus Seat Booking\n",
+        "available_seat = [1,2,3,4,5,6,7,8,9,10]\n",
+        "\n",
+        "user_seat = int(input(\"Enter your Bus Seat Number:\"))\n",
+        "\n",
+        "\n",
+        "if user_seat in available_seat:\n",
+        "    print(\"Your Bus Seat is Booked\")\n",
+        "    available_seat.remove(user_seat)\n",
+        "else:\n",
+        "    print(\"Bus Seat is Already booked\")\n",
+        "\n",
+        "print(\"Remaining Seat:\", available_seat)"
+      ],
+      "metadata": {
+        "id": "GgpYB54ywVd8",
+        "outputId": "7e1496ce-a591-4f07-f517-cb4e1743cf64",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter your Bus Seat Number:3\n",
+            "Your Bus Seat is Booked\n",
+            "Remaining Seat: [1, 2, 4, 5, 6, 7, 8, 9, 10]\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Task 9\n",
+        "# Message analyzer\n",
+        "\n",
+        "user_msg=input(\"Enter your Message:\")\n",
+        "Character=(len(user_msg))\n",
+        "print(\"Character:\", Character)\n",
+        "\n",
+        "Words=len(user_msg.split())\n",
+        "print(\"Words:\",Words)\n",
+        "\n",
+        "Space=user_msg.count(\" \")\n",
+        "print(\"Space:\",Space)\n",
+        "\n",
+        "print(\"User Message in Uppercase:\",user_msg.upper())\n",
+        "\n",
+        "vowels=[\"a\",\"e\",\"i\",\"o\",\"u\"]\n",
+        "vowel_count=0\n",
+        "for character in user_msg:\n",
+        "    if character in vowels:\n",
+        "        vowel_count=vowel_count+1\n",
+        "print(\"Vowels:\",vowel_count)\n",
+        "\n",
+        "if \"Python\" in user_msg:\n",
+        "    print(\"Python Found:\",\"Yes\")\n",
+        "else:\n",
+        "    print(\"Python Found:\",\"No\")"
+      ],
+      "metadata": {
+        "id": "rlw0lwuXw4N1",
+        "outputId": "0d12bf3c-aa23-42e1-af68-ddff118400c8",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        }
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter your Message:My First Programming Language is Python \n",
+            "Character: 40\n",
+            "Words: 6\n",
+            "Space: 6\n",
+            "User Message in Uppercase: MY FIRST PROGRAMMING LANGUAGE IS PYTHON \n",
+            "Vowels: 10\n",
+            "Python Found: Yes\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Task 10\n",
+        "# Contact Book\n",
+        "\n",
+        "Contacts_book={\n",
+        "\"Sara\":\"03224673916\",\n",
+        "\"Zara\":\"03156893247\",\n",
+        "\"Saba\":\"033374851264\",\n",
+        "\"Sara\":\"03224673916\"\n",
+        "}\n",
+        "\n",
+        "while True:\n",
+        "        print(\"1. Add Contact\")\n",
+        "        print(\"2. Search Contact\")\n",
+        "        print(\"3. Display All Contact\")\n",
+        "        print(\"4. Exit\")\n",
+        "\n",
+        "        choice=int(input(\"Enter your choice:\"))\n",
+        "\n",
+        "        if choice == 1:\n",
+        "            name =input (\"Enter your Contact Name:\")\n",
+        "            phone=int(input(\"Enter your phone Number:\"))\n",
+        "\n",
+        "            if name in Contacts_book:\n",
+        "                print(\"Contact already exists\")\n",
+        "            else:\n",
+        "                Contacts_book[name] = phone\n",
+        "                print(\"Contact added successfully\")\n",
+        "\n",
+        "\n",
+        "        elif choice== 2:\n",
+        "             name=input(\"Enter Contact name to search:\")\n",
+        "             if name in Contacts_book:\n",
+        "                 print(\"Phone Number:\",Contacts_book[name])\n",
+        "             else:\n",
+        "                 print(\"Contact not found\")\n",
+        "        elif choice ==3:\n",
+        "            print(\"Contact Book:\",Contacts_book)\n",
+        "\n",
+        "        elif choice==4:\n",
+        "            print(\"Good bye\")\n",
+        "            break\n",
+        "        else:\n",
+        "            print(\"Invalid Contact\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "1N1fCRQM8UU1",
+        "outputId": "25240afa-4389-4c80-adf6-c820a627b2ea"
+      },
+      "execution_count": 17,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1. Add Contact\n",
+            "2. Search Contact\n",
+            "3. Display All Contact\n",
+            "4. Exit\n",
+            "Enter your choice:1\n",
+            "Enter your Contact Name:Sara \n",
+            "Enter your phone Number:03224673916\n",
+            "Contact added successfully\n",
+            "1. Add Contact\n",
+            "2. Search Contact\n",
+            "3. Display All Contact\n",
+            "4. Exit\n",
+            "Enter your choice:2\n",
+            "Enter Contact name to search:Zara\n",
+            "Phone Number: 03156893247\n",
+            "1. Add Contact\n",
+            "2. Search Contact\n",
+            "3. Display All Contact\n",
+            "4. Exit\n",
+            "Enter your choice:3\n",
+            "Contact Book: {'Sara': '03224673916', 'Zara': '03156893247', 'Saba': '033374851264', 'Sara ': 3224673916}\n",
+            "1. Add Contact\n",
+            "2. Search Contact\n",
+            "3. Display All Contact\n",
+            "4. Exit\n",
+            "Enter your choice:4\n",
+            "Good bye\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
